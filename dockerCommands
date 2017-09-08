@@ -1,0 +1,81 @@
+docker images
+
+docker run repository:tag command [arguments] : This will download the image with tag
+e.g. docker run busybox:1.24 echo "hello world"
+
+do a ls in docker root directory
+docker run busybox:1.24 ls /
+
+-i : start container in interactive mode
+-t : creates pseudo-TTY that attached stdin,stdout
+
+docker run -i -t busybox:1.24
+This gets us into container and we can do [ls] or execute any command
+
+When we exit the container, docker will also shutdown the container and all the changes are
+lost. Next time docker will spin a new image for us and we do not see the last changes.
+
+detached mode : run container in background
+docker run -d busybox:1.24 sleep 1000
+
+to verify : [docker ps] will show running containers, container id shown here is short form of
+long version of container id generated
+
+docker ps -a
+This will show history of all the containers
+
+docker run --rm busubox:1.24 sleep 1
+it will remove the docker when it exits after 1 sec
+docker ps -a will not show above docker container
+
+docker run --name hello_world busybox:1.24
+it will give the name to container
+
+docker inspect <container-id>
+low level information about the docker
+
+
+-p host_port:container_port
+docker run -it -p 8888:8080 tomcat 8.0
+localhost:8888
+
+docker log <container-id>
+
+docker history busybox:1.24
+shows images layer for this docker
+
+Each container has thin writable layers which gets deleted when container exits. Image layers remains as is.
+
+To persist our changes, we should build the docker images by: 
+1. Commit changes made in docker container :
+	Spin up container from base image
+	Install git package in the container
+	Commit changes made in the container
+		Inside docker image, install git
+		apt-get update && apt-get install -y git 
+
+		docker commit container_id reposiotry_name:tag
+		
+2. Write to DockerFile
+
+Create a docker file which have the instructions
+docker build -t tagNameForDockerImage .
+-t : tag name
+-f : here we used [.] where Dockerfile is, for other path use -f
+
+The above command will use the Dockerfile to build a docker image 
+
+CMD : command executing when container starts
+COPY: copy files
+ADD: COPY + more features(unzip files, download files from internet)
+CACHE: Docker uses cache if the instructions are not changed
+
+docker-machine ls
+displays IP and other info for docker machine
+
+
+docker exec -it <container-id> <command>
+docker exec -it <container-id> bash
+it allows to run command in running container
+
+ps axu : displays all running process in the container, when inside container using docker exec
