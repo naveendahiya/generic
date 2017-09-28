@@ -1,0 +1,10 @@
+--permissions on table
+grant select on <tablename> to <user>;
+revoke select on <tablename> to <user>;
+
+--Show what object type is
+select * from all_objects where object_name='<table or view name>';
+
+--Check privleges given on table
+select * from all_tab_privs where table_name='<tableName>'
+
