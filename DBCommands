@@ -1,3 +1,6 @@
+--check host of DB
+select * from global_name;
+
 --permissions on table
 grant select on <tablename> to <user>;
 revoke select on <tablename> to <user>;
