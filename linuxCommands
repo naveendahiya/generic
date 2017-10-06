@@ -59,3 +59,27 @@ find . '*.txt' -exec grep -l wordToSearch {} \;
 < : give input to command
 
 cat < test/run.sh        
+
+sort -nk2 -t\; <filename>
+sort use space as default delimiter
+n : column is number
+k2 : key as column2
+-t with escape(\;): delimiter is ;
+
+cut -f 2 -d\; <filename>
+cut use tabs as default dilimter
+get 2 columm from filename which have dilimiter ;
+
+cut -f 1,2 -d\; <filename>
+show 1 and 2 fields from filename
+
+tr S s < filename > filename_changed
+replace S with s and take input as filename and store it in a new file filename_changed
+
+paste filename1 filename2
+show columns from bothfile together in single line, student from diff file will show togther
+
+join filename1 filename2
+same as paste but will skip the name to be printed twice
+
+
