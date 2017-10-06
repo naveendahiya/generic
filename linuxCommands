@@ -1,0 +1,61 @@
+\ : enable search option in vi
+
+less file name
+space for going down
+b : going backup
+\ : for search in file
+
+file * : it will show all files types in the current directory
+
+open -a Preview picture.jpg : -a will let you specify what tool to use to open the file
+
+ls -R : ls recursively all the directories 
+
+touch {a..c}{1..2}{.jpg,.txt} : it will create 12 files
+
+> redirect to file, create a new file everytime
+>> append to existing file
+
+ctrl+d : end bash
+
+echo hello >> abc.txt : it will append one line [hello] at the end of abc.txt
+
+grep [pattern] fileName | sort : sort is command which will sort the output
+
+cut -f 3 fileName: select column 3 of fileName
+
+cut -f 3 fileName | grep 4 | wc -l 
+wc : word count, -l : number of lines
+
+echo hello"($Date)".txt : double quotes are required when there are spances in the fileName
+
+ctrl + a,e,f,b : startofline, end of line, front, backward
+alt + b, f : tab back, tab front
+
+ctrl +d : deletes a char
+ctrl + k : 
+
+ctrl+r : reverse i search : start typying any command and it will search that from the history
+
+vimtutor
+
+A : to append the text in VIM
+
+emacs : F10 gives you menu which shows commands
+
+sort -k2 fileName : sort file by second column key, it sorts string
+
+sort -kn2 fileName: -n tell it is number which should be sorted
+
+-r : reverse sort, -c : count, |uniq
+
+grep -i : -i means search in case insensitive way
+grep -vE : -v : inverse the meaning of search
+
+find : search files in directory and subdirectory
+
+find . '*.txt' -exec grep -l wordToSearch {} \;
+
+< : give input to command
+
+cat < test/run.sh        
