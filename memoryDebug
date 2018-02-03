@@ -1,0 +1,3 @@
+ps -ax | grep <app name> : this will give pid
+
+sudo -u <sudoUser> jmap -dump:format=b,file=cheap.bin <pid>
