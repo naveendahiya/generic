@@ -1,3 +1,8 @@
 ps -ax | grep <app name> : this will give pid
 
 sudo -u <sudoUser> jmap -dump:format=b,file=cheap.bin <pid>
+
+It should generate the heap dump like cheap.bin
+
+To analyse it, use the following:
+jhat -J-Xmx2g -port 7001 cheap.bin 
