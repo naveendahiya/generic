@@ -7,4 +7,22 @@ CDeployment: Config management(maintain functional and performance requirement,
              Dockerization
 CMonitoring: 
 
+Git
+
+git config --global user.name "dahiya, naveen"
+git config --global user.email "a@b.com"
+git config --list
+
+git help
+git help <command> : git help rebase
+
+git init
+git status
+git add .
+git add --all
+git commit -m "message"
+
+git log
+git log --author="a@b.com"
+git log --author="Naveen Dahiya"
 
