@@ -1,5 +1,10 @@
 CDev : Git
 CTesting : Selenium, testNG, RestAssured
 CI : Jenkins
-CDeployment: Config management(maintain functional and performance requirement, releasing deployments, update servers, maintain config updates for each server), dockerization
-CMonitoring
+CDeployment: Config management(maintain functional and performance requirement, 
+             releasing deployments, update servers, maintain config updates for each server), 
+             
+             Dockerization
+CMonitoring: 
+
+
