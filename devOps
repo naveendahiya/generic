@@ -26,3 +26,10 @@ git log
 git log --author="a@b.com"
 git log --author="Naveen Dahiya"
 
+git diff : changes between staging and local
+git diff -staged : diff between staging and repository
+
+git remote add origin "remoteUrl"
+
+
+
