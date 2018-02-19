@@ -26,10 +26,18 @@ git log
 git log --author="a@b.com"
 git log --author="Naveen Dahiya"
 
+git workflow:
+Working area : local files, which are not yet added[git add]
+Staging area : after [git add <filename>], this file is in staging area
+Repository : after [git commit], files are in repository
+
 git diff : changes between staging and local
 git diff -staged : diff between staging and repository
 
 git remote add origin "remoteUrl"
 
+git commit --ammend -m "corrected commit message"
+
+git reset --soft commitId
 
 
