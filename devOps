@@ -38,6 +38,8 @@ git remote add origin "remoteUrl"
 
 git commit --ammend -m "corrected commit message"
 
+This will keep the changes tracked in all files, just reset the head to mentioned commitId position
 git reset --soft commitId
+
 
 
