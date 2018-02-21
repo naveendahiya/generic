@@ -41,5 +41,16 @@ git commit --ammend -m "corrected commit message"
 This will keep the changes tracked in all files, just reset the head to mentioned commitId position
 git reset --soft commitId
 
+Jenkins:
+brew install jenkins
+To have launchd start jenkins now and restart at login:
+  brew services start jenkins
+Or, if you don't want/need a background service you can just run:
+  jenkins
 
+Create users:
+Manage Jenkins--> Manager users
+
+Role-based Authorization Strategy : This get installed initially if you allow jenkins to install commonly used plugins
+Manage Jenkins--> Manage plugins : confirm here
 
