@@ -53,4 +53,5 @@ Manage Jenkins--> Manager users
 
 Role-based Authorization Strategy : This get installed initially if you allow jenkins to install commonly used plugins
 Manage Jenkins--> Manage plugins : confirm here
-
+Monitor build : catlight
+delivery pipeline plugin
