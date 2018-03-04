@@ -55,3 +55,6 @@ Role-based Authorization Strategy : This get installed initially if you allow je
 Manage Jenkins--> Manage plugins : confirm here
 Monitor build : catlight
 delivery pipeline plugin
+build pipeline plugin
+
+Blue ocean : new UI for jenkins
