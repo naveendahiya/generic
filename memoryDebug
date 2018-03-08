@@ -6,3 +6,6 @@ It should generate the heap dump like cheap.bin
 
 To analyse it, use the following:
 jhat -J-Xmx2g -port 7001 cheap.bin 
+
+Analyse ThreadDumps
+https://dzone.com/articles/how-analyze-java-thread-dumps
