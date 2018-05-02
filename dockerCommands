@@ -24,6 +24,11 @@ long version of container id generated
 docker ps -a
 This will show history of all the containers
 
+docker ps -aq
+it will show only the ids of the container
+
+docker rm $(docker ps -aq) : This will deleted all exited container in one command
+
 docker run --rm busubox:1.24 sleep 1
 it will remove the docker when it exits after 1 sec
 docker ps -a will not show above docker container
