@@ -1,0 +1,9 @@
+already have : this is a new utility to upgrade apps
+brew tap buo/cask-upgrade
+
+Upgrade all outdated apps:
+brew cu
+
+Upgrade a specific app:
+brew cu [CASK]
+e.g. brew cu rstudio
